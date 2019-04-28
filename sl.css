@@ -1,0 +1,76 @@
+body{
+    font-family:"微軟正黑體";
+    font-weight:bolder;
+    background-color:rgb(172, 180, 164);
+    margin:0px;
+}
+.head{
+    display: flex;background-image:url("flame.jpg");
+    background-repeat: repeat; margin: 0px;padding: 0px;
+    align-items: center;
+}
+.pic{
+    padding: 0px;margin: 0px;height: 53px;
+}
+#TOP{
+    font-family:"微軟正黑體";font-size:40px;flex:auto;text-align: center;color:gold;
+    text-shadow:2px 5px 2px green;
+}
+.content{
+    display:flex;
+    margin-left:auto;margin-right:auto;text-align: center;
+    justify-content: center;flex-wrap: wrap;
+    height:auto;background-image:url("digi_army.jpg");
+    text-shadow:1px 1px 1px black;
+}
+.box{
+    flex:auto;
+    vertical-align: top;
+    margin: 0px;padding: 5px;
+    text-align: center;
+}
+.title{
+    text-align:center;font-size:30px;width:120px;margin-left:auto;margin-right:auto; 
+    text-shadow:2px 3px 1px #2c4da7ef;
+}
+.title:hover{
+    background-color: blueviolet;
+}
+.hide{
+    display:none;
+    font-size: 20px;
+    color: rgb(175, 115, 190);
+    background-color: rgb(32, 106, 136);
+    width:210px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+.big4{
+    display:none;
+}
+.intro{
+    width:50px;text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro:hover{
+    background-color: blueviolet;
+}
+.photospace{
+    text-align: center;
+}
+#photowall{
+    width:450px;
+    box-shadow:2px 2px 2px black;
+}
+@media (max-width:1200px){
+    .box{
+        width:45%;
+    }
+}
+@media (max-width:500px){
+    .box{
+        width: 90%;
+    }
+}
