@@ -1,0 +1,105 @@
+body{
+    font-family:"微軟正黑體";
+    font-weight:bolder;
+    background-color:rgb(172, 180, 164);
+    margin:0px;
+}
+.head{
+    display: flex;background-image:url("flame.jpg");
+    background-repeat: repeat; margin: 0px;padding: 0px;
+    align-items: center;
+}
+.pic{
+    padding: 0px;margin: 0px;height: 53px;
+}
+#TOP{
+    font-family:"微軟正黑體";font-size:40px;flex:auto;text-align: center;color:gold;
+    text-shadow:2px 5px 2px green;animation:blink 3s;
+}
+.content{
+    display:flex;
+    margin-left:auto;margin-right:auto;text-align: center;
+    justify-content: center;flex-wrap: wrap;
+    height:auto;background-image:url("digi_army.jpg");
+    text-shadow:1px 1px 1px black;
+}
+.box{
+    flex:auto;width:auto;
+    margin: 0px;padding: 5px;
+    text-align: center;
+}
+.title{
+    text-align:center;font-size:30px;width:120px;margin-left:auto;margin-right:auto; 
+    text-shadow:2px 3px 1px #2c4da7ef; transition: all 1.5s;
+}
+.title:hover{
+    background-color: blueviolet;
+}
+.hide{
+    display:none;
+    font-size: 20px;
+    color: rgb(175, 115, 190);
+    background-color: rgb(32, 106, 136);
+    width:240px;
+    border-radius: 100%;
+    margin-left: auto;
+    margin-right: auto;   
+}
+.big4{
+    display:none;
+}
+.intro{
+    width:50px;text-align: center;transition: all 1.5s;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro:hover{
+    background-color: blueviolet;
+}
+.showspace{
+    text-align: center;
+}
+.photobox{
+    width:auto;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow:1px 1px 1px black;
+}
+.vbox{
+    height:65%;
+    width:600px;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow:1px 1px 1px black;
+}
+
+
+@keyframes blink{
+    0%{opacity:1}
+    15%{color:greenyellow;font-size:45px}
+    25%{opacity:0}
+    35%{color:green;font-size:35px}
+    50%{opacity:1}
+    65%{color:blueviolet;font-size:45px}
+    75%{opacity:0}
+    85%{color:red;font-size:35px}
+    100%{opacity:1}
+}
+@media (max-width:1200px){
+    .box{
+        width:45%;
+    }
+}
+@media (max-width:500px){
+    .box{
+        width: 90%;
+    }
+}
+@media (max-width:600px){
+    .vbox{
+        width: 90%;
+    }
+    .photobox{
+        width: 80%;
+    }
+}
