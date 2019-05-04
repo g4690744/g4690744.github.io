@@ -9,7 +9,7 @@
 function hiden(n){
     var title=document.getElementById("about"+n)
     title.style.color="blue";
-    title.style.border="1px dashed black"
+    title.style.textDecoration="underline";
     var menuitem=document.getElementById("menu"+n);
     if(menuitem.style.display=="block"){
         menuitem.style.display="none";
@@ -33,15 +33,74 @@ function change(n){
         four.style.border="1px dashed gold";
     }
 }
+function cubu(){
+    var vwall=document.getElementById("vwall");
+    vwall.src="https://www.youtube.com/embed/czg5TJEvedg";
+}
 function restart(){
     window.location.reload();
 }
 function warning(){
     alert("你即將離開此安全頁面!");
 }
+function show(){
+	var userscw=document.body.offsetWidth;
+	var box=document.getElementById("adbox");
+	var styles=window.getComputedStyle(box);
+	var size=styles.getPropertyValue("width");
+	size=parseInt(size);
+	var animeID=window.setInterval(function(){
+		size++;
+		box.style.width=size+"px";
+		box.style.height=size+"px";
+		if(size>=userscw){
+			window.clearInterval(animeID);
+		}	
+	},2)
+	var backmall=document.getElementById("cancle");
+	backmall.style.display="block";
+	var vwall=document.getElementById("advbox");
+	vwall.style.display="block";
+	var baboo7=document.getElementById("baboo7");
+	baboo7.style.display="block";
+}
+function backsmall(){
+	var box=document.getElementById("adbox");
+	var styles=window.getComputedStyle(box);
+	var size=styles.getPropertyValue("width");
+	size=parseInt(size);
+	var animeID=window.setInterval(function(){
+		size--;
+		box.style.width=size+"px";
+		box.style.height=size+"px";
+		if(size<=55){
+			window.clearInterval(animeID);
+		}	
+	},2)
+	var backmall=document.getElementById("cancle");
+	backmall.style.display="none";
+	var vwall=document.getElementById("advbox");
+	vwall.style.display="none";
+	vwall.pause();
+	var baboo7=document.getElementById("baboo7");
+	baboo7.style.display="none";
+}
+
+
 </script>
 </head>
 <body>
+<div class="adbox" id="adbox" onclick="show()">!NEWS!
+
+<video class="advbox" id="advbox" src="mp4.mp4" controls></video>
+<div class="advintro" id="baboo7">
+    今天就讓你們知道猛七的由來!
+    不喜歡就右上角!
+</div>
+</div>
+
+<div class="canclebt" id="cancle" onclick="backsmall()">X</div>	
+
 <div class="head" id="sltitle" >
     <img src="三聯.jpg" class="pic" />
     <div onclick="restart()"  id="TOP">三聯領域</div>
@@ -68,7 +127,7 @@ function warning(){
     <main id="menu2" class="hide">
         <div>101級啦啦隊</div>
         <div>99級送舊</div>
-        <div>CUBU</div>
+        <div onclick="cubu()">CUBU</div>
     </main>
     </div>
     <div class="box">
@@ -92,7 +151,7 @@ function warning(){
 
 <div class="showspace">
 <img class="photobox" id="photowall" src="101lala.jpg"  />
-<iframe class="vbox" id="vwall" src="https://www.youtube.com/embed/NV4mTiNoxV4" ></iframe>
+<iframe class="vbox" id="vwall" src="https://www.youtube.com/embed/NV4mTiNoxV4" allowfullscreen></iframe>
 </div>
 
 </body>

@@ -1,3 +1,25 @@
+.adbox{
+	width:55px;height:55px;background-color:gray;
+    position:fixed;top:0px;right:0px;font-size:16px;text-align: center;
+    animation: adshow 1s infinite;
+	
+}
+.canclebt{
+	width:15px;height:15px;background-color:black;
+	position:fixed;top:0px;right:0px;font-size:10px;
+	color:white;text-align: center;display:none;
+	
+}
+.advbox{
+	display:none;margin-left:auto;margin-right:auto;
+}
+#baboo7{
+	display:none;
+}
+.advintro{
+    font-size:20px;color:white;
+}
+
 body{
     font-family:"微軟正黑體";
     font-weight:bolder;
@@ -13,7 +35,7 @@ body{
     padding: 0px;margin: 0px;height: 53px;
 }
 #TOP{
-    font-family:"微軟正黑體";font-size:40px;flex:auto;text-align: center;color:gold;
+    font-family:"微軟正黑體";font-size:34px;flex:auto;text-align: center;color:gold;
     text-shadow:2px 5px 2px green;animation:blink 3s;
 }
 .content{
@@ -30,7 +52,7 @@ body{
 }
 .title{
     text-align:center;font-size:30px;width:120px;margin-left:auto;margin-right:auto; 
-    text-shadow:2px 3px 1px #2c4da7ef; transition: all 1.5s;
+    text-shadow:2px 3px 1px #2c4da7ef; 
 }
 .title:hover{
     background-color: blueviolet;
@@ -60,7 +82,7 @@ body{
     text-align: center;
 }
 .photobox{
-    width:auto;
+    width:45%;
     margin-left:auto;
     margin-right:auto;
     box-shadow:1px 1px 1px black;
@@ -72,17 +94,23 @@ body{
     margin-right:auto;
     box-shadow:1px 1px 1px black;
 }
-
+@keyframes adshow{
+    0%{color:red}
+    
+    50%{color:yellow}
+    
+    100%{color:green}
+}
 
 @keyframes blink{
     0%{opacity:1}
-    15%{color:greenyellow;font-size:45px}
+    15%{color:greenyellow;font-size:38px}
     25%{opacity:0}
-    35%{color:green;font-size:35px}
+    35%{color:green;font-size:34px}
     50%{opacity:1}
-    65%{color:blueviolet;font-size:45px}
+    65%{color:blueviolet;font-size:38px}
     75%{opacity:0}
-    85%{color:red;font-size:35px}
+    85%{color:red;font-size:34px}
     100%{opacity:1}
 }
 @media (max-width:1200px){
